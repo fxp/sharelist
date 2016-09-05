@@ -1,0 +1,38 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>登陆注册</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+                <div>
+                    <md-input-container>
+                        <label>手机号</label>
+                        <input ng-model="user.phoneno">
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container>
+                        <label>验证码</label>
+                        <input ng-model="user.verificationCode" type="text">
+                    </md-input-container>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button md-autofocus ng-click="getVerificationCode()">
+                获得验证码
+            </md-button>
+            <md-button ng-click="loginWithVerificationCode()">
+                登陆注册
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
